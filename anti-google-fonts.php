@@ -9,6 +9,19 @@
  * License: GPL v2 or later
  */
 
+
+// if folders do not exist, create it
+if (!file_exists(plugin_dir_path(__FILE__) . 'assets')) {
+    mkdir(plugin_dir_path(__FILE__) . 'assets', 0777, true);
+}
+if (!file_exists(plugin_dir_path(__FILE__) . 'assets/fonts')) {
+    mkdir(plugin_dir_path(__FILE__) . 'assets/fonts', 0777, true);
+}
+if (!file_exists(plugin_dir_path(__FILE__) . 'assets/stylesheets')) {
+    mkdir(plugin_dir_path(__FILE__) . 'assets/stylesheets', 0777, true);
+}
+
+
 ob_start();
 
 add_action('shutdown', function() {
