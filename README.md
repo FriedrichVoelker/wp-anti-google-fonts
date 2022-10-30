@@ -1,0 +1,1 @@
+Automatically finds all instances of https://fonts.googleapis.com links and replaces them with local variants. 
