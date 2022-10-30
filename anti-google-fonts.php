@@ -3,10 +3,10 @@
 /**
  * Plugin Name: Anti Google Fonts
  * Description: Remove Google Fonts from your WordPress site and host them locally.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Friedrich Völker
  * Author URI: https://völker.dev
- * License: GPL v2 or later
+ * License: GPL v3
  */
 
 
@@ -151,6 +151,10 @@ add_filter('final_output', function($output) {
 
         
 
+
+        if($stylename == "" || strlen($stylename) == 0){
+            continue;
+        }
 
         if(strlen($stylename) > 30){
             $oldstylename = $stylename;
